@@ -1,0 +1,24 @@
+class Solution {
+public:
+int fun(int a,int b)
+{
+    while(b!=0)
+    {
+        int temp=b;
+        b=a%b;
+        a=temp;
+    }
+    return a;
+}
+    string gcdOfStrings(string str1, string str2) {
+        if(str1+str2!=str2+str1)
+        return "";
+
+        int n=str1.size();
+        int m=str2.size();
+        int gc=fun(n,m);
+        return str1.substr(0,gc);
+            
+            
+    }
+};
